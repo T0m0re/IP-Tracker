@@ -1,0 +1,148 @@
+:root {
+  --clr-very-dark: hsl(0, 0%, 17%);
+  --clr-dark-gray: hsl(0, 0%, 59%);
+
+  --fw-bold: 700;
+  --fw-mid: 500;
+  --fw-sm: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 100%;
+  max-height: 100svh;
+  overflow: hidden;
+}
+
+.top-section {
+  background: url(images/pattern-bg-desktop.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 30svh;
+  text-align: center;
+}
+
+.top-section h2 {
+  padding-block: 2rem;
+  color: white;
+}
+
+.top-section .form-container {
+  position: relative;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  margin-inline: auto;
+  max-width: 80%;
+  width: 30%;
+  height: 3rem;
+  border: none;
+  background-color: white;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.top-section .form-container form {
+  height: 100%;
+}
+
+.top-section .form-container input {
+  width: 90%;
+  height: 100%;
+  padding-inline-start: 0.6rem;
+  font-size: 1.3rem;
+
+  border: none;
+  background-color: transparent;
+}
+
+.top-section .form-container input:focus {
+  border: none;
+  outline: none;
+}
+
+.top-section input::placeholder {
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: var(--fw-mid);
+}
+
+.top-section button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 3rem;
+  padding-inline: 0.9rem;
+  border: none;
+  background-color: var(--clr-very-dark);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.top-section button:hover {
+  background-color: var(--clr-dark-gray);
+}
+
+.ip-info {
+  position: relative;
+  bottom: 42rem;
+
+  display: flex;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: 0.8rem;
+  padding: 2rem;
+
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+}
+
+.ip-info div {
+  padding-inline: 1.5rem;
+}
+
+.ip-info div:not(:first-child) {
+  border-left: 0.18rem solid var(--clr-dark-gray);
+}
+
+.ip-info div .bold {
+  margin-block-start: 1rem;
+  width: 7.8rem;
+
+  font-weight: var(--fw-bold);
+}
+
+/* Map */
+#map {
+  height: 70svh;
+  z-index: 1;
+}
+
+@media (max-width: 770px) {
+  .ip-info {
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .ip-info div {
+    align-items: center;
+  }
+
+  .ip-info div:not(:first-child) {
+    border: none;
+  }
+
+  .ip-info div .bold {
+    width: 100%;
+    padding-block-end: 1rem;
+    margin-block-start: 0.3rem;
+  }
+
+  .top-section .form-container {
+    width: 70%;
+  }
+}
