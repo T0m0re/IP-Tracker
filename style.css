@@ -87,7 +87,7 @@ body {
 
 .ip-info {
   position: relative;
-  bottom: 42rem;
+  bottom: 38rem;
 
   display: flex;
   width: fit-content;
@@ -126,6 +126,7 @@ body {
     gap: 1rem;
     width: 80%;
     text-align: center;
+    padding: 1rem;
   }
 
   .ip-info div {
