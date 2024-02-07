@@ -3,6 +3,8 @@ const iP = document.querySelector(".IP-address");
 const isp = document.querySelector(".ISP");
 const locate = document.querySelector(".location");
 const timezone = document.querySelector(".timezone");
+
+const errorMessage = document.querySelector(".error-message");
 const apiKey = "at_I7NMutP4Sk4ZiXx7vI2al0lXAAXmc";
 
 let map;
@@ -78,7 +80,8 @@ async function SearchGeoIPInfo(query) {
 
     return apiData;
   } catch (error) {
-    console.error("Error fetching GeoIP information:", error.message);
+    // console.error("Error fetching GeoIP information:", error.message);
+    errorMessage.textContent = error.message;
   }
 }
 

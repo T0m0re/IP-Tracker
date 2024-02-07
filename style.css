@@ -24,7 +24,7 @@ body {
   background: url(images/pattern-bg-desktop.png) no-repeat;
   background-size: cover;
   background-position: bottom;
-  height: 30svh;
+  height: 35svh;
   text-align: center;
 }
 
@@ -33,13 +33,17 @@ body {
   color: white;
 }
 
+.top-section h3 {
+  padding-block: 2rem;
+  color: rgb(255, 0, 0);
+}
 .top-section .form-container {
   position: relative;
   /* display: flex; */
   /* justify-content: space-between; */
   margin-inline: auto;
   max-width: 80%;
-  width: 30%;
+  width: 40%;
   height: 3rem;
   border: none;
   background-color: white;
@@ -85,10 +89,14 @@ body {
   background-color: var(--clr-dark-gray);
 }
 
-.ip-info {
-  position: relative;
-  bottom: 38rem;
+.ip-box {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  z-index: 10;
+}
 
+.ip-info {
   display: flex;
   width: fit-content;
   margin-inline: auto;
@@ -97,6 +105,7 @@ body {
 
   background-color: rgb(255, 255, 255);
   z-index: 10;
+  box-shadow: 0.5rem 0.5rem 1rem 0.2rem rgba(58, 55, 85, 0.267);
 }
 
 .ip-info div {
@@ -116,11 +125,14 @@ body {
 
 /* Map */
 #map {
-  height: 70svh;
+  height: 65svh;
   z-index: 1;
 }
 
 @media (max-width: 770px) {
+  .ip-box {
+    top: 22%;
+  }
   .ip-info {
     flex-direction: column;
     gap: 1rem;
